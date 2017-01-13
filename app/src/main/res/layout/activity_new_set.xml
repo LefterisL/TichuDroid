@@ -1,0 +1,273 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ntamakoupa.tichudroid.NewSet"
+    android:focusable="false"
+    android:focusableInTouchMode="false">
+
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/team_1_badge_small"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="OUT FIRST"
+        android:id="@+id/first_out_txt"
+        android:layout_gravity="center_vertical"
+        android:textColor="@color/new_set_grey"
+        android:textSize="@dimen/out_first"
+        android:layout_above="@+id/pickers"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/team_2_badge_small"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="20dp"/>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/np_h"
+        android:weightSum="3"
+        android:id="@+id/pickers"
+        android:layout_below="@+id/imageButton2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp">
+
+        <NumberPicker
+            android:id="@+id/team_1_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginRight="1dp"
+            android:background="@color/red" />
+
+        <NumberPicker
+            android:id="@+id/first_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/new_set_grey" />
+
+        <NumberPicker
+            android:id="@+id/team_2_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="1dp"
+            android:background="@color/cyan" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_below="@+id/pickers"
+        android:layout_above="@+id/save"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_1_view"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="left">
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_1_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1025"
+                android:id="@+id/score_1"
+                android:textSize="@dimen/set_scores"
+                android:textColor="@color/red"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_2_view"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="left">
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_2_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="975"
+                android:id="@+id/score_2"
+                android:textSize="@dimen/set_scores"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/cyan"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_3_view"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="right">
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_3_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name" />
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_3_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_4_view"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="right">
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_4_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name" />
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_4_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/start_button_h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SAVE"
+        android:id="@+id/save"
+        android:gravity="center"
+        android:background="#898989"
+        android:textColor="#fff"
+        android:textSize="@dimen/bottom_buttons"
+        android:textIsSelectable="false"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

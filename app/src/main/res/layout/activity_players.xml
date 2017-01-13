@@ -1,0 +1,36 @@
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_player"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/button_red_plus_small"
+        android:padding="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ADD NEW PLAYER"
+        android:textSize="17sp"
+        android:id="@+id/textView3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:textColor="#898989" />
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/playersList"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:clickable="true" />
+
+</LinearLayout>

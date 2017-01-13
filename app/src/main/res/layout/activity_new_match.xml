@@ -1,0 +1,178 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_above="@+id/addPlayersText">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t1img"
+                android:src="@drawable/team_1_badge"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player1"
+                android:layout_below="@+id/t1img"
+                android:layout_alignStart="@+id/t1img"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/button_red_plus_small"
+                android:padding="0dp"
+                android:background="#c43233"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Player"
+                android:textSize="@dimen/add_player"
+                android:id="@+id/addp1txt"
+                android:layout_below="@+id/player1"
+                android:layout_alignStart="@+id/player1"
+                android:layout_alignEnd="@+id/player1"
+                android:background="#898989"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:padding="2dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player2"
+                android:src="@drawable/button_red_plus_small"
+                android:layout_below="@+id/addp1txt"
+                android:layout_alignStart="@+id/player1"
+                android:padding="0dp"
+                android:layout_marginTop="10dp"
+                android:background="#c43233" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Player"
+                android:textSize="@dimen/add_player"
+                android:id="@+id/addp2txt"
+                android:background="#898989"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:padding="2dp"
+                android:layout_below="@+id/player2"
+                android:layout_alignStart="@+id/player2"
+                android:layout_alignEnd="@+id/player2"
+                android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/t2img"
+                android:src="@drawable/team_2_badge"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player3"
+                android:layout_below="@+id/t2img"
+                android:layout_alignLeft="@+id/t2img"
+                android:layout_alignStart="@+id/t2img"
+                android:layout_marginTop="10dp"
+                android:padding="0dp"
+                android:src="@drawable/button_cyan_plus_small"
+                android:background="#018399" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Player"
+                android:textSize="@dimen/add_player"
+                android:id="@+id/addp3txt"
+                android:background="#898989"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:padding="2dp"
+                android:layout_below="@+id/player3"
+                android:layout_alignStart="@+id/player3"
+                android:layout_alignEnd="@+id/player3"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player4"
+                android:src="@drawable/button_cyan_plus_small"
+                android:padding="0dp"
+                android:layout_below="@+id/addp3txt"
+                android:layout_alignStart="@+id/player3"
+                android:layout_marginTop="10dp"
+                android:background="#018399" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Player"
+                android:textSize="@dimen/add_player"
+                android:id="@+id/addp4txt"
+                android:background="#898989"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:padding="2dp"
+                android:layout_below="@+id/player4"
+                android:layout_alignEnd="@+id/player4"
+                android:layout_alignStart="@+id/player4"
+                android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add players to start a new game"
+        android:id="@+id/addPlayersText"
+        android:textSize="@dimen/add_players_to_start"
+        android:textIsSelectable="false"
+        android:layout_above="@+id/start"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/start_button_h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="START"
+        android:id="@+id/start"
+        android:gravity="center"
+        android:background="#898989"
+        android:textColor="#fff"
+        android:textSize="@dimen/bottom_buttons"
+        android:textIsSelectable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

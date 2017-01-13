@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="cyan">#018399</color>
+    <color name="red">#c43233</color>
+    <color name="green">#ff244e1c</color>
+    <color name="yellow">#ffca10</color>
+    <color name="grey">#898989</color>
+    <color name="white">#ffffff</color>
+    <color name="new_set_grey">#363636</color>
+    <color name="add_score_grey">#98999d</color>
+    <color name="scoreboard_grey">#717276</color>
+    <color name="apptheme_color">#ffca10</color>
+    <color name="pressed_color">#4d90fe</color>
+    <color name="default_color">#ffffff</color>
+</resources>

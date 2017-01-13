@@ -1,0 +1,18 @@
+<resources>
+    <dimen name="start_button_h">56dp</dimen>
+    <dimen name="scoreboard_avatar">50dp</dimen>
+    <dimen name="tichu_switch">20sp</dimen>
+    <dimen name="match_score">30sp</dimen>
+    <dimen name="match_player_name">22sp</dimen>
+    <dimen name="player_list_name">20sp</dimen>
+    <dimen name="bottom_buttons">38sp</dimen>
+    <dimen name="add_players_to_start">18sp</dimen>
+    <dimen name="add_player">12sp</dimen>
+    <dimen name="score_label">25sp</dimen>
+    <dimen name="t_gt_label">20sp</dimen>
+    <dimen name="set_scores">25sp</dimen>
+    <dimen name="out_first">21sp</dimen>
+    <dimen name="player_min_h">40dp</dimen>
+    <dimen name="np_h">200dp</dimen>
+    <dimen name="logo_m_top">40dp</dimen>
+</resources>

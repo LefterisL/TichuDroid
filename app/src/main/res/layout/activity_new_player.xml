@@ -1,0 +1,77 @@
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PICK A NAME"
+        android:textSize="22sp"
+        android:id="@+id/pickName"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#898989"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/playerName"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/pickName"
+        android:layout_centerHorizontal="true"
+        android:imeOptions="actionDone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PICK AN AVATAR"
+        android:textSize="22sp"
+        android:id="@+id/pickAvatar"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#898989"
+        android:layout_below="@+id/playerName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+
+    <GridView
+        android:id="@+id/avatarList"
+        android:numColumns="3"
+        android:gravity="center"
+        android:layout_below="@+id/pickAvatar"
+        android:layout_above="@+id/submit"
+        android:layout_marginTop="12dp"
+        android:stretchMode="columnWidth"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"
+        android:listSelector="@color/red">
+
+    </GridView>
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/start_button_h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SUBMIT"
+        android:id="@+id/submit"
+        android:gravity="center"
+        android:background="#c43233"
+        android:textColor="#fff"
+        android:textSize="40sp"
+        android:textIsSelectable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:imeOptions="actionDone"/>
+
+</RelativeLayout>

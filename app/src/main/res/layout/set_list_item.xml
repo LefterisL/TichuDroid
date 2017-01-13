@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        android:minHeight="56dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="GT"
+        android:id="@+id/p1"
+        android:textColor="@color/green"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_gt_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="GT"
+        android:id="@+id/p2"
+        android:textColor="@color/green"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_gt_label"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="1025"
+        android:id="@+id/score_1"
+        android:textColor="@color/red"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:paddingRight="5dp"
+        android:textSize="@dimen/set_scores" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="-125"
+        android:id="@+id/score_2"
+        android:textColor="@color/cyan"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:paddingLeft="5dp"
+        android:textSize="@dimen/set_scores" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="GT"
+        android:id="@+id/p3"
+        android:textColor="@color/green"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_gt_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="GT"
+        android:id="@+id/p4"
+        android:textColor="@color/green"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="@dimen/t_gt_label" />
+</LinearLayout>

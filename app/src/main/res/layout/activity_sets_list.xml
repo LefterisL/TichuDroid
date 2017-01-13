@@ -1,0 +1,155 @@
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="4"
+        android:id="@+id/top_scores"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/team_1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/team_1_badge_small" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="150"
+            android:textSize="@dimen/match_score"
+            android:id="@+id/score_1_top"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="300"
+            android:textSize="@dimen/match_score"
+            android:id="@+id/score_2_top"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:textColor="@color/cyan" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/team_2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/team_2_badge_small" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:weightSum="6"
+        android:id="@+id/scores"
+        android:orientation="horizontal"
+        android:minHeight="56dp"
+        android:layout_below="@id/top_scores"
+        android:layout_marginTop="20dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/scoreboard_avatar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/p1_image"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/guy" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/scoreboard_avatar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/p2_image"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/guy2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SCORE"
+            android:minHeight="56dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/score_txt"
+            android:textColor="@color/red"
+            android:layout_weight="2"
+            android:gravity="top|center"
+            android:textSize="@dimen/score_label"
+            android:layout_gravity="center" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/scoreboard_avatar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/p3_image"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/guy3" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/scoreboard_avatar"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:id="@+id/p4_image"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/girl2" />
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sets_list"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:clickable="true"
+        android:layout_below="@+id/scores"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/undo" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/start_button_h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="UNDO"
+        android:id="@+id/undo"
+        android:gravity="center"
+        android:onClick="undoAction"
+        android:background="#898989"
+        android:textColor="#fff"
+        android:textSize="@dimen/bottom_buttons"
+        android:textIsSelectable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

@@ -1,0 +1,409 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ntamakoupa.tichudroid.MatchProfile"
+    android:id="@+id/main_layout"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_above="@+id/add_score"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/red"
+            android:layout_marginRight="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="1025"
+                android:textSize="@dimen/match_score"
+                android:id="@+id/score_1"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="#fff"/>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_1_view"
+                android:minHeight="@dimen/player_min_h"
+                android:layout_below="@+id/score_1"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_1_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_1_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="#FFF"
+                    android:text="Name"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="left" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tichu"
+                android:id="@+id/p1_tichu_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_1_view"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_1_tichu"
+                android:layout_below="@+id/p1_tichu_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="TICHU"
+                android:textOff=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Grand Tichu"
+                android:id="@+id/p1_grand_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_1_tichu"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_1_grand"
+                android:layout_below="@+id/p1_grand_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="GRAND"
+                android:textOff="" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_2_view"
+                android:minHeight="@dimen/player_min_h"
+                android:layout_below="@+id/player_1_grand"
+                android:layout_alignLeft="@+id/player_1_view"
+                android:layout_alignStart="@+id/player_1_view"
+                android:layout_marginTop="5dp">
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_2_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_2_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="#FFF"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tichu"
+                android:id="@+id/p2_tichu_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_2_view"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_2_tichu"
+                android:layout_below="@+id/p2_tichu_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="TICHU"
+                android:textOff="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Grand Tichu"
+                android:id="@+id/p2_grand_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_2_tichu"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_2_grand"
+                android:layout_below="@+id/p2_grand_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="GRAND"
+                android:textOff="" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:id="@+id/button"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/p2_tichu_text" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@color/cyan"
+            android:layout_marginLeft="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="975"
+                android:textSize="@dimen/match_score"
+                android:id="@+id/score_2"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textColor="#fff" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_3_view"
+                android:minHeight="@dimen/player_min_h"
+                android:layout_below="@+id/score_2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_3_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_3_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="#FFF"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tichu"
+                android:id="@+id/p3_tichu_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_3_view"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_3_tichu"
+                android:layout_below="@+id/p3_tichu_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="TICHU"
+                android:textOff="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Grand Tichu"
+                android:id="@+id/p3_grand_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_3_tichu"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_3_grand"
+                android:layout_below="@+id/p3_grand_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="GRAND"
+                android:textOff="" />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_4_view"
+                android:minHeight="@dimen/player_min_h"
+                android:layout_below="@+id/player_3_grand"
+                android:layout_alignLeft="@+id/player_3_view"
+                android:layout_alignStart="@+id/player_3_view"
+                android:layout_marginTop="5dp">
+
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_4_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/boy" />
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/player_4_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/match_player_name"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="#FFF"
+                    android:layout_gravity="center_vertical"
+                    android:text="Name" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Tichu"
+                android:id="@+id/p4_tichu_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_4_view"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_4_tichu"
+                android:layout_below="@+id/p4_tichu_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="TICHU"
+                android:textOff="" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Grand Tichu"
+                android:id="@+id/p4_grand_text"
+                android:textSize="@dimen/tichu_switch"
+                android:textColor="#fff"
+                android:layout_below="@+id/player_4_tichu"
+                android:layout_centerHorizontal="true"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_4_grand"
+                android:layout_below="@+id/p4_grand_text"
+                android:layout_centerHorizontal="true"
+                android:thumb="@drawable/apptheme_switch_inner_holo_light"
+                android:track="@drawable/apptheme_switch_track_holo_light"
+                android:textOn="GRAND"
+                android:textOff="" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/start_button_h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Add score"
+        android:id="@+id/add_score"
+        android:gravity="center"
+        android:background="@color/add_score_grey"
+        android:textColor="#fff"
+        android:textSize="@dimen/bottom_buttons"
+        android:textIsSelectable="false"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/scoreboard"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/start_button_h"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Scoreboard"
+        android:id="@+id/scoreboard"
+        android:gravity="center"
+        android:background="@color/scoreboard_grey"
+        android:textColor="#fff"
+        android:textSize="@dimen/bottom_buttons"
+        android:textIsSelectable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
