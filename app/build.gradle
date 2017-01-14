@@ -7,13 +7,14 @@ android {
     defaultConfig {
         applicationId "ntamakoupa.tichudroid"
         minSdkVersion 15
-        targetSdkVersion 20
+        targetSdkVersion 24
         versionCode 3
         versionName "1.1.1"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled false /* Enable Before Singing APK */
+            shrinkResources false /* Enable before Singing APK */
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
