@@ -190,14 +190,6 @@
                 android:textOn="GRAND"
                 android:textOff="" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button"
-                android:layout_alignParentBottom="true"
-                android:layout_toRightOf="@+id/p2_tichu_text" />
-
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="fill_parent"
